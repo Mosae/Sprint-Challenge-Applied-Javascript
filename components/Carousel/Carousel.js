@@ -19,9 +19,37 @@
 */
 
 //parent container
-const parentContainer = document.querySelector('.carousel-container');
 
-function createCarousel() {
+
+const currentIndex = 0;
+const images = []
+
+//image list
+
+img1[0] = './assets/carousel/mountains.jpeg';
+img2[1] = './assets/carousel/computer.jpeg';
+img3[2] = './assets/carousel/trees.jpeg';
+img4[3] = './assets/carousel/turntable.jpeg';
+
+function changeImg() {
+  document.carousel.src = img[currentIndex];
+  if (currentIndex < images.length - 1) {
+    i++
+
+  } else {
+    i = 0;
+  }
+
+  leftBtnDiv.addEventListener('click', event => {
+
+  })
+}
+
+
+
+
+
+function CreateCarousel() {
   //create elements
   const carouselDiv = document.createElement('div');
   const leftBtnDiv = document.createElement('div');
@@ -51,11 +79,12 @@ function createCarousel() {
   img2.src = './assets/carousel/computer.jpeg';
   img3.src = './assets/carousel/trees.jpeg';
   img4.src = './assets/carousel/turntable.jpeg';
-
-
   rightBtnDiv.textContent = 'Right Button';
 
 
 
   return carouselDiv
 }
+const parentContainer = document.querySelector('.carousel-container');
+let carousel = new CreateCarousel()
+parentContainer.append(carousel)

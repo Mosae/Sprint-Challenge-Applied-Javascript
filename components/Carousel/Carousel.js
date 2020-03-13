@@ -45,6 +45,16 @@ function createCarousel() {
   carouselDiv.append(img4)
   carouselDiv.append(rightBtnDiv);
 
+  //content
+  leftBtnDiv.textContent = 'Left Button';
+  img1.src = './assets/carousel/mountains.jpeg';
+  img2.src = './assets/carousel/computer.jpeg';
+  img3.src = './assets/carousel/trees.jpeg';
+  img4.src = './assets/carousel/turntable.jpeg';
+
+
+  rightBtnDiv.textContent = 'Right Button';
+
 
 
   return carouselDiv

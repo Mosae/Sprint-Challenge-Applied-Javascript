@@ -22,7 +22,7 @@
 //send GET reguest
 
 const cardData = axios.get('https://lambda-times-backend.herokuapp.com/articles').then(dataCards => {
-        // console.log(dataCards.data);
+        console.log(dataCards.data);
         createData(dataCards.data.articles);
     })
     .catch(error => {
@@ -49,7 +49,7 @@ function createData(data) {
     const headlineDiv = document.createElement('div');
     const authorDiv = document.createElement('div');
     const imgDiv = document.createElement('div');
-    const imgTag = document.createElement('img');
+    const imgTag = document.createElement('div');
     const nameSpan = document.createElement('span');
 
     //add classes
@@ -64,14 +64,14 @@ function createData(data) {
 
     headlineDiv.textContent = data.healine;
     imgTag.src = data.authorPhoto;
-    nameSpan.textContent = data.authorName;
+    nameSpan.textContent = 'By ' + data.authorName;
 
     //append
     cardDiv.appendChild(headlineDiv);
     cardDiv.appendChild(authorDiv);
     authorDiv.appendChild(imgDiv);
     imgDiv.appendChild(imgTag);
-    authorDiv.append(nameSpan);
+    authorDiv.appendChild(nameSpan);
 
     return cardDiv
 

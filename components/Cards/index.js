@@ -20,11 +20,14 @@
 
 
 //send GET reguest
-
-const cardData = axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response => {
-    console.log(response)
-});
-
+// for in loop through the object array
+const cardData = axios.get('https://lambda-times-backend.herokuapp.com/articles').then(dataCards => {
+        console.log(dataCards.data);
+        console.log(dataCards.data.articles)
+    })
+    .catch(error => {
+        console.log('data not returned', error)
+    })
 //creating a function
 const mainContainer = document.querySelector('.cards-container');
 
@@ -55,10 +58,8 @@ function createData(data) {
     cardDiv.appendchild(headlineDiv);
     cardDiv.appendchild(authorDiv);
     authorDiv.appendchild(imgDiv);
-    imgDiv.appendChild(imgTag)
-    authorDiv.append(nameSpan)
-
-
+    imgDiv.appendChild(imgTag);
+    authorDiv.append(nameSpan);
 
     return cardDiv
 

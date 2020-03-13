@@ -32,7 +32,7 @@ Edit this document to include your answers after each question. Make sure to lea
    In browser interface that treats HTML as a tree structure. It allows us to render javascript on the webpage
 
 2) What is an event?
-   Any action taken on an element e.g a click of a button
+   Any action taken on an element e.g a click of a button. This can be by the user or the browser
 
 3. What is an event listener?
    Code that waits for an action to take place before executing.

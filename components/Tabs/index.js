@@ -25,11 +25,14 @@ function tab(array) {
 let topics = document.querySelector('.topics')
 
 axios.get(' https://lambda-times-backend.herokuapp.com/topics').then(response => {
-    // console.log(response);
-    let topicsData = response.data.topics;
+        // console.log(response);
+        let topicsData = response.data.topics;
 
-    topicsData.forEach(x => {
-        topics.appendChild(tab(x))
-        console.log(topics)
-    });
-});
+        topicsData.forEach(x => {
+            topics.appendChild(tab(x))
+            console.log(topics)
+        })
+    })
+    .catch(error => {
+        console.log('data not returned', error)
+    })

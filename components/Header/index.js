@@ -9,7 +9,7 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-const parent = document.querySelector('.header-container');
+
 
 function Header() {
     // define new elements
@@ -34,6 +34,10 @@ function Header() {
 
 
     return header
+
 }
 
-console.log(parent)
+const parent = document.querySelector('.header-container');
+let menu = new Header();
+
+parent.appendChild(menu);

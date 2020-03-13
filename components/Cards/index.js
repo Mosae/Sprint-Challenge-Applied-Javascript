@@ -20,7 +20,19 @@
 
 
 //send GET reguest
-axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response => {
+
+const cardData = axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response => {
     console.log(response)
-})
-console.log()
+});
+
+//creating a function
+const mainContainer = document.querySelector('.cards-container');
+
+function createData(obj) {
+    const cardDiv = document.createElement('div');
+    const headlineDiv = document.createElement('div');
+    const authorDiv = document.createElement('div');
+    const imgDiv = document.createElement('div');
+    const imgTag = document.createElement('img');
+    const nameSpan = document.createElement('span');
+}

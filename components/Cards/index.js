@@ -64,7 +64,7 @@ function createData(data) {
 
     //text content
 
-    headlineDiv.textContent = data.healine;
+    headlineDiv.textContent = data.headline;
     imgTag.src = data.authorPhoto;
     nameSpan.textContent = 'By ' + data.authorName;
 

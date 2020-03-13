@@ -23,10 +23,17 @@ function Header() {
     header.appendChild(tempSpan);
     console.log(header)
     // add classes to elements
-
+    header.classList.add('header');
+    dateSpan.classList.add('date');
+    tempSpan.classList.add('temp');
     // set text content
+    dateSpan.textContent = 'SMARCH 28, 2019';
+    h1Tag.textContent = 'Lambda Times';
+    tempSpan.textContent = '98°';
 
 
 
     return header
 }
+
+console.log(parent)
